@@ -1,7 +1,7 @@
 export default class user {
     constructor(age, sex) {
-      this.age = age;
-      this.sex = sex;
+      //this.age = age;
+      //this.sex = sex;
     }
 
   }
