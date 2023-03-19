@@ -1,28 +1,19 @@
 export default class user {
     constructor(age) {
       this.age = age;
+      this.relative = [4.16, 1.62, 1, .53, .084, .034, .012, .006]
     }
 
 
 
     planets() {
-      const Mercury = this.age * 4.16;
-      const Venus = this.age * 1.62;
-      const Mars = this.age * .53;
-      const Jupiter = this.age * .084;
-      const Saturn = this.age * .034;
-      const Uranus = this.age * .012;
-      const Neptune = this.age * .006;
-
-      const planetArray = [Mercury, Venus, this.age, Mars, Jupiter, Saturn, Uranus, Neptune]
-      const fixedArray = [];
+      const planetArray = [];
       for(let i = 0; i < 8; i++)
       {
-        fixedArray.push((planetArray[i]).toFixed(2))
-        fixedArray[i] = parseFloat(fixedArray[i])
+        planetArray.push((this.age * this.relative[i]).toFixed(2))
+        planetArray[i] = parseFloat(planetArray[i])
       }
-      console.log(fixedArray)
-      return fixedArray;
+      return planetArray;
     }
   }
 
