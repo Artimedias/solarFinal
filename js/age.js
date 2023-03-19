@@ -1,24 +1,21 @@
 export default class user {
-    constructor(age, sex) {
+    constructor(age) {
       this.age = age;
-      this.sex = sex;
     }
 
-    checkType() {
-      const returnArray = [this.age, this.sex]
-      return returnArray;
-    }
+
 
     planets() {
-      /*const Mercury;
-      const Venus;
-      const Mars;
-      const Jupiter;
-      const Saturn;
-      const Uranus;
-      const Neptune;*/
+      const Mercury = this.age * 4.16;
+      const Venus = this.age * 1.62;
+      const Mars = this.age * .53;
+      const Jupiter = this.age * .084;
+      const Saturn = this.age * .034;
+      const Uranus = this.age * .012;
+      const Neptune = this.age * .006;
 
-      //const planetArray = [Mercury, Venus, this.age, Mars, Jupiter, Saturn, Uranus, Neptune]
+      const planetArray = [Mercury, Venus, this.age, Mars, Jupiter, Saturn, Uranus, Neptune]
+      console.log(planetArray)
       return planetArray;
     }
   }
