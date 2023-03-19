@@ -35,6 +35,29 @@ export default class user {
         return ("That will happen this year!")
       }
     }
+    timePast(y) {
+      const pastArray = [];
+
+      y -= this.age;
+
+      if(y > 0)
+      {
+        for(let i = 0; i < 8; i++)
+        {
+          pastArray.push((y * this.relative[i]).toFixed(2))
+          pastArray[i] = parseFloat(pastArray[i])
+        }
+        return pastArray;
+      }
+      else if(y < 0)
+      {
+        return (`That already happened ${Math.abs(y)} years ago!`)
+      }
+      else
+      {
+        return ("That will happen this year!")
+      }
+    }
   }
 
 //Mercury = 4.16, Venus = 1.62, Mars = .53, Jupiter = .084, Saturn = .034, Uranus = .012, Neptune = .006

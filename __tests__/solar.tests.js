@@ -2,10 +2,10 @@ import user from './../js/age.js';
 
 describe('checkType', () => {
   let userOne;
-  userOne = new user(42);
+  userOne = new user(40);
 
   test('Should be able to use checktype to return the users age and sex', () => {
-    expect(userOne.age).toEqual(42);
+    expect(userOne.age).toEqual(40);
   });
 });
 
@@ -27,4 +27,14 @@ describe('timeUntil', () => {
     expect(userThree.timeUntil(8)).toEqual("That already happened 2 years ago!");
     expect(userThree.timeUntil(10)).toEqual("That will happen this year!");
   });  
+});
+  describe('timePast', () => {
+    let userFour;
+    userFour = new user(80);
+  
+    test('Should return how long it is until the user reaches X age', () => {
+      expect(userFour.timePast(22)).toEqual([33.28, 12.96, 8, 4.24, 0.67, 0.27, 0.1, 0.05]);
+      //expect(userFour.timePast(8)).toEqual("That already happened 2 years ago!");
+      //expect(userFour.timePast(10)).toEqual("That will happen this year!");
+    });  
 });
