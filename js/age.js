@@ -3,9 +3,6 @@ export default class user {
       this.age = age;
       this.relative = [4.16, 1.62, 1, .53, .084, .034, .012, .006]
     }
-
-
-
     planets() {
       const planetArray = [];
       for(let i = 0; i < 8; i++)
@@ -14,6 +11,11 @@ export default class user {
         planetArray[i] = parseFloat(planetArray[i])
       }
       return planetArray;
+    }
+    timeUntil(x) {
+      const untilArray = [];
+      
+      return untilArray;
     }
   }
 

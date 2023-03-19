@@ -10,10 +10,19 @@ describe('checkType', () => {
 });
 
 describe('planets', () => {
-  let normalFemale;
-  normalFemale = new user(20, "female");
+  let userTwo;
+  userTwo = new user(20);
 
   test('Should return an array with the users age across all planets', () => {
-    expect(normalFemale.planets()).toEqual([83.2, 32.4, 20, 10.6, 1.68, 0.68, 0.24, 0.12]);
+    expect(userTwo.planets()).toEqual([83.2, 32.4, 20, 10.6, 1.68, 0.68, 0.24, 0.12]);
+  });  
+});
+
+describe('timeUntil', () => {
+  let userThree;
+  userThree = new user(10);
+
+  test('Should return how long it is until the user reaches X age', () => {
+    expect(userThree.timeUntil()).toEqual([83.2, 32.4, 20, 10.6, 1.68, 0.68, 0.24, 0.12]);
   });  
 });
