@@ -15,8 +15,14 @@ export default class user {
       const Neptune = this.age * .006;
 
       const planetArray = [Mercury, Venus, this.age, Mars, Jupiter, Saturn, Uranus, Neptune]
-      console.log(planetArray)
-      return planetArray;
+      const fixedArray = [];
+      for(let i = 0; i < 8; i++)
+      {
+        fixedArray.push((planetArray[i]).toFixed(2))
+        fixedArray[i] = parseFloat(fixedArray[i])
+      }
+      console.log(fixedArray)
+      return fixedArray;
     }
   }
 

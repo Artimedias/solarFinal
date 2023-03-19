@@ -14,6 +14,6 @@ describe('planets', () => {
   normalFemale = new user(20, "female");
 
   test('Should return an array with the users age across all planets', () => {
-    expect(normalFemale.planets()).toEqual([83.2, 32.400000000000006, 20, 10.600000000000001, 1.6800000000000002, 0.68, 0.24, 0.12]);
+    expect(normalFemale.planets()).toEqual([83.2, 32.4, 20, 10.6, 1.68, 0.68, 0.24, 0.12]);
   });  
 });
