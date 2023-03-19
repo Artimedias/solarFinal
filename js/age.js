@@ -40,8 +40,9 @@ export default class user {
 
       y -= this.age;
 
-      if(y > 0)
+      if(y < 0)
       {
+        y = Math.abs(y);
         for(let i = 0; i < 8; i++)
         {
           pastArray.push((y * this.relative[i]).toFixed(2))
@@ -49,13 +50,13 @@ export default class user {
         }
         return pastArray;
       }
-      else if(y < 0)
+      else if(y > 0)
       {
-        return (`That already happened ${Math.abs(y)} years ago!`)
+        return (`That will happen in ${y} years!`)
       }
       else
       {
-        return ("That will happen this year!")
+        return ("That happened this year!")
       }
     }
   }

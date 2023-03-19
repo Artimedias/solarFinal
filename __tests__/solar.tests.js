@@ -32,9 +32,9 @@ describe('timeUntil', () => {
     let userFour;
     userFour = new user(80);
   
-    test('Should return how long it is until the user reaches X age', () => {
-      expect(userFour.timePast(22)).toEqual([33.28, 12.96, 8, 4.24, 0.67, 0.27, 0.1, 0.05]);
-      //expect(userFour.timePast(8)).toEqual("That already happened 2 years ago!");
-      //expect(userFour.timePast(10)).toEqual("That will happen this year!");
+    test('Should return how its been since the user reached Y age', () => {
+      expect(userFour.timePast(22)).toEqual([241.28, 93.96, 58, 30.74, 4.87, 1.97, 0.7, 0.35]);
+      expect(userFour.timePast(100)).toEqual("That will happen in 20 years!");
+      expect(userFour.timePast(80)).toEqual("That happened this year!");
     });  
 });
