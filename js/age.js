@@ -14,7 +14,15 @@ export default class user {
     }
     timeUntil(x) {
       const untilArray = [];
-      
+
+      x -= this.age;
+
+      for(let i = 0; i < 8; i++)
+      {
+        untilArray.push((x * this.relative[i]).toFixed(2))
+        untilArray[i] = parseFloat(untilArray[i])
+      }
+      console.log(untilArray);
       return untilArray;
     }
   }

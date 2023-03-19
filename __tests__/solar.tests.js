@@ -23,6 +23,6 @@ describe('timeUntil', () => {
   userThree = new user(10);
 
   test('Should return how long it is until the user reaches X age', () => {
-    expect(userThree.timeUntil()).toEqual([83.2, 32.4, 20, 10.6, 1.68, 0.68, 0.24, 0.12]);
+    expect(userThree.timeUntil(18)).toEqual([33.28, 12.96, 8, 4.24, 0.67, 0.27, 0.1, 0.05]);
   });  
 });
