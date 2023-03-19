@@ -5,7 +5,7 @@ export default class user {
     }
 
     checkType() {
-      //const returnArray = [this.age, this.sex]
+      const returnArray = [this.age, this.sex]
       return returnArray;
     }
   }
