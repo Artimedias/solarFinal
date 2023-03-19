@@ -24,5 +24,7 @@ describe('timeUntil', () => {
 
   test('Should return how long it is until the user reaches X age', () => {
     expect(userThree.timeUntil(18)).toEqual([33.28, 12.96, 8, 4.24, 0.67, 0.27, 0.1, 0.05]);
+    expect(userThree.timeUntil(8)).toEqual("That already happened 2 years ago!");
+    expect(userThree.timeUntil(10)).toEqual("That will happen this year!");
   });  
 });

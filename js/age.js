@@ -17,13 +17,23 @@ export default class user {
 
       x -= this.age;
 
-      for(let i = 0; i < 8; i++)
+      if(x > 0)
       {
-        untilArray.push((x * this.relative[i]).toFixed(2))
-        untilArray[i] = parseFloat(untilArray[i])
+        for(let i = 0; i < 8; i++)
+        {
+          untilArray.push((x * this.relative[i]).toFixed(2))
+          untilArray[i] = parseFloat(untilArray[i])
+        }
+        return untilArray;
       }
-      console.log(untilArray);
-      return untilArray;
+      else if(x < 0)
+      {
+        return (`That already happened ${Math.abs(x)} years ago!`)
+      }
+      else
+      {
+        return ("That will happen this year!")
+      }
     }
   }
 
